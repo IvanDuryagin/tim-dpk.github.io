@@ -1,2 +1,20 @@
 # tim-dpk.github.io
-web page of project "ТИМ-ДПК"
+project/
+├── index.html
+├── style.css
+└── img/
+    ├── favicon-16.png
+    ├── favicon-32.png
+    ├── step1.png
+    ├── step2.png
+    ├── step3.png
+    ├── step4.png
+    ├── step5.png
+    ├── step6.png
+    ├── team-labudin.jpg
+    ├── team-popov.png
+    ├── team-duryagin.png
+    ├── icon-address.png
+    ├── icon-clock.png
+    ├── icon-map.png
+    └── icon-contacts.png
