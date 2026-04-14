@@ -242,6 +242,11 @@ section {
   font-size: 0.95rem;
 }
 
+/* Градиентный вариант секции команды */
+.team--gradient {
+  background: linear-gradient(0deg, var(--color-light), var(--color-primary));
+}
+
 /* ===== Contacts ===== */
 .contacts__grid {
   display: grid;
