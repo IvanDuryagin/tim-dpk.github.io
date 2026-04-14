@@ -197,8 +197,14 @@ section {
 /* ===== Team ===== */
 
 /* Градиентный вариант секции команды */
+/*.team--gradient {
+  background: linear-gradient(0deg, var(--color-light), var(--color-primary));
+} */
+
 .team--gradient {
   background: linear-gradient(0deg, var(--color-light), var(--color-primary));
+  text-align: center;
+  padding: 100px 0;
 }
 
 .team__grid {
