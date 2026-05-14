@@ -385,3 +385,66 @@ section {
     padding: 12px 24px;
   }
 }
+
+/* ===== Партнёры ===== */
+.partners {
+  padding: var(--spacing-section) 0;
+  background-color: var(--color-light);
+}
+
+.partners__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.partner-card {
+  background-color: var(--color-gray-light);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.partner-card__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.partner-card__info {
+  padding: 20px;
+  text-align: center;
+}
+
+.partner-card__title {
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.partner-card__type {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .partners__grid {
+    gap: 20px;
+  }
+  .partner-card__info {
+    padding: 15px;
+  }
+  .partner-card__title {
+    font-size: 1rem;
+  }
+}
