@@ -23,4 +23,6 @@ project/
     ├── letter3.png
     ├── letter4.png
     ├── letter5.png
-    └── letter6.png
+    ├── letter6.png
+    ├── patent1.jpeg
+    └── patent2.jpeg
