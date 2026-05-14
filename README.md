@@ -17,4 +17,10 @@ project/
     ├── icon-address.png
     ├── icon-clock.png
     ├── icon-map.png
-    └── icon-contacts.png
+    ├── icon-contacts.png
+    ├── letter1.png
+    ├── letter2.png
+    ├── letter3.png
+    ├── letter4.png
+    ├── letter5.png
+    └── letter6.png
