@@ -36,6 +36,7 @@
       <a href="#developments">Разработки</a>
       <a href="#contacts">Контакты</a>
     </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">🌙 Тёмная тема</button>
   </div>
 </header>
 
@@ -391,6 +392,53 @@
       observer.observe(section);
     });
   </script>
+
+  <script>
+  (function() {
+    const toggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement; // <html>
+    
+    // Функция применения темы
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        htmlElement.classList.add('dark-mode');
+        if (toggleBtn) toggleBtn.textContent = '☀️ Светлая тема';
+      } else {
+        htmlElement.classList.remove('dark-mode');
+        if (toggleBtn) toggleBtn.textContent = '🌙 Тёмная тема';
+      }
+      localStorage.setItem('theme', theme);
+    }
+    
+    // Получение сохранённой темы или системной
+    function getPreferredTheme() {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark' || saved === 'light') return saved;
+      // Если нет сохранённого – проверить системную тему
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    
+    // Инициализация
+    const initialTheme = getPreferredTheme();
+    setTheme(initialTheme);
+    
+    // Обработчик на кнопку
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        const isDark = htmlElement.classList.contains('dark-mode');
+        setTheme(isDark ? 'light' : 'dark');
+      });
+    }
+    
+    // (Опционально) Следить за изменением системной темы, если нет ручного выбора
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      // Только если пользователь явно не выбирал тему (сохранённая отсутствует)
+      if (!localStorage.getItem('theme')) {
+        setTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+  })();
+</script>
     
 </body>
 </html>
