@@ -37,7 +37,7 @@
       <a href="#developments">Разработки</a>
       <a href="#contacts">Контакты</a>
     </nav>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">🌙 Тёмная тема</button>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">Тёмная тема</button>
   </div>
 </header>
 
@@ -403,10 +403,10 @@
     function setTheme(theme) {
       if (theme === 'dark') {
         htmlElement.classList.add('dark-mode');
-        if (toggleBtn) toggleBtn.textContent = '☀️ Светлая тема';
+        if (toggleBtn) toggleBtn.textContent = 'Светлая тема';
       } else {
         htmlElement.classList.remove('dark-mode');
-        if (toggleBtn) toggleBtn.textContent = '🌙 Тёмная тема';
+        if (toggleBtn) toggleBtn.textContent = 'Тёмная тема';
       }
       localStorage.setItem('theme', theme);
     }
