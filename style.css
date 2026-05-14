@@ -257,7 +257,7 @@ section {
 
 /* ===== Contacts ===== */
 .contacts {
-  background-color: var(--color-primary);
+  background-color: var(--color-light);
 }
 
 .contacts__grid {
@@ -315,7 +315,7 @@ section {
 } */
 
 .page-footer {
-  background-color: var(--color-primary);
+  background-color: var(--color-light);
   border-top: 1px solid rgba(0, 0, 0, 0.1); /* слегка затемняем границу, если нужна */
 }
 
