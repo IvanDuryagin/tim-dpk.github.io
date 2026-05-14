@@ -256,6 +256,10 @@ section {
 }
 
 /* ===== Contacts ===== */
+.contacts {
+  background-color: var(--color-light);
+}
+
 .contacts__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -452,7 +456,7 @@ section {
 /* ===== Разработки (патенты) ===== */
 .developments {
   padding: var(--spacing-section) 0;
-  background: linear-gradient(0deg, var(--color-light), var(--color-primary)); /* как у команды */
+  background-color: var(--color-light);
 }
 
 .developments__grid {
