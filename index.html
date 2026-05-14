@@ -23,6 +23,23 @@
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
 </head>
 <body>
+
+<header class="sticky-header">
+  <div class="container header-container">
+    <a href="#" class="header-logo">ТИМ-ДПК</a>
+    <nav class="header-nav">
+      <a href="#about">О проекте</a>
+      <a href="#steps">Алгоритм</a>
+      <a href="#tech">Технологии</a>
+      <a href="#team">Команда</a>
+      <a href="#partners">Партнёры</a>
+      <a href="#developments">Разработки</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+  
   <main class="site-main">
     <!-- Hero section (бывший call-to-action) -->
     <section class="hero">
@@ -306,5 +323,74 @@
       </div>
     </div>
   </footer>
+
+<!-- Модальное окно -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <img id="modal-img" class="modal-img" src="" alt="">
+      <div id="modal-text" class="modal-text"></div>
+    </div>
+  </div>
+
+  <script>
+  // Модальное окно для карточек партнёров и патентов
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalText = document.getElementById('modal-text');
+  const closeBtn = document.querySelector('.modal-close');
+
+  function openModal(imgSrc, title, extraText) {
+    modal.style.display = 'block';
+    modalImg.src = imgSrc;
+    modalText.innerHTML = `<h3 style="margin-top:0;">${title}</h3><p>${extraText}</p>`;
+  }
+
+  // Назначаем обработчики на карточки партнёров
+  document.querySelectorAll('.partner-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const img = card.querySelector('.partner-card__image').src;
+      const title = card.querySelector('.partner-card__title').innerText;
+      const type = card.querySelector('.partner-card__type').innerText;
+      openModal(img, title, type);
+    });
+    card.style.cursor = 'pointer';
+  });
+
+  // Назначаем обработчики на карточки патентов
+  document.querySelectorAll('.patent-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const img = card.querySelector('.patent-card__image').src;
+      const title = card.querySelector('.patent-card__title').innerText;
+      const number = card.querySelector('.patent-card__number').innerText;
+      const desc = card.querySelector('.patent-card__desc').innerText;
+      openModal(img, title, `${number}<br><br>${desc}`);
+    });
+    card.style.cursor = 'pointer';
+  });
+
+  // Закрытие по крестику
+  closeBtn.onclick = () => modal.style.display = 'none';
+  // Закрытие по клику вне контента
+  window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+</script>
+    
+  <script>
+  // Плавное появление секций при скролле
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('section-visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  
+    sections.forEach(section => {
+      section.classList.add('section-fade');
+      observer.observe(section);
+    });
+  </script>
+    
 </body>
 </html>
