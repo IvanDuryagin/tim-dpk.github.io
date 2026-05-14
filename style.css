@@ -669,12 +669,14 @@ section {
 .dark-mode {
   --color-light: #1a1a1a;
   --color-dark: #f0f0f0;
+  --color-text: #f0f0f0; 
   --color-gray-light: #2a2a2a;
   --color-text-muted: rgba(240, 240, 240, 0.7);
 }
 
 .dark-mode body {
   background-color: #121212;
+  color: var(--color-text);
 }
 
 .dark-mode .team-member,
@@ -711,3 +713,50 @@ section {
   background-color: #f0f0f0;
   color: #121212;
 }
+
+  /* === Дополнительные переопределения для всех текстов === */
+  
+  /* Основные заголовки и текст секций */
+  .section-title,
+  .hero__title,
+  .hero__subtitle,
+  .about__content p,
+  .step-card__title,
+  .step-card__desc,
+  .tech__item dt,
+  .tech__item dd,
+  .team-member__name,
+  .team-member__role,
+  .team-member__desc,
+  .partner-card__title,
+  .partner-card__type,
+  .patent-card__title,
+  .patent-card__desc,
+  .contact-item__title,
+  .contact-item__content p,
+  .footer__logo,
+  .footer__nav a,
+  .footer__copy {
+    color: var(--color-text);  /* наследует #f0f0f0 */
+  }
+
+  /* Специально для muted текста (который был полупрозрачным) */
+  .step-card__desc,
+  .team-member__desc,
+  .patent-card__desc,
+  .contact-item__content p,
+  .footer__copy {
+    color: var(--color-text-muted);  /* остаётся полупрозрачным, но светлым */
+  }
+
+  /* Номер патента (был с зелёным фоном) – сохранить читаемость */
+  .patent-card__number {
+    background: rgba(32, 191, 107, 0.3);
+    color: var(--color-text);
+  }
+
+  /* Кнопка переключения темы – если она у вас есть */
+  .theme-toggle {
+    background: var(--color-primary);
+    color: var(--color-dark);
+  }
