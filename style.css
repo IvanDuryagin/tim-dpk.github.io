@@ -191,16 +191,11 @@ section {
 
 /* ===== CTA Secondary ===== */
 .cta-secondary {
-  background: linear-gradient(0deg, var(--color-primary), var(--color-light));
+  background-color: var(--color-primary);
   text-align: center;
 }
 
 /* ===== Team ===== */
-
-/* Градиентный вариант секции команды */
-/*.team--gradient {
-  background: linear-gradient(0deg, var(--color-light), var(--color-primary));
-} */
 
 .team--gradient {
   background: linear-gradient(0deg, var(--color-light), var(--color-primary));
