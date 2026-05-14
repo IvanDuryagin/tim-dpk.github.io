@@ -138,6 +138,27 @@ img {
   margin-right: auto;
 }
 
+.theme-toggle {
+  background: var(--color-primary);
+  border: none;
+  border-radius: 100px;
+  padding: 8px 20px;
+  font-family: var(--font-title);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  color: var(--color-dark);
+}
+.theme-toggle:hover {
+  opacity: 0.85;
+  transform: scale(0.97);
+}
+@media (max-width: 768px) {
+  .theme-toggle {
+    margin-top: 8px;
+  }
+}
+
 /* ===== Секции ===== */
 section {
   padding: var(--spacing-section) 0;
@@ -644,40 +665,49 @@ section {
   font-size: 1.1rem;
 }
 
-/* Тёмная тема */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-light: #1a1a1a;
-    --color-dark: #f0f0f0;
-    --color-gray-light: #2a2a2a;
-    --color-text-muted: rgba(240, 240, 240, 0.7);
-    --color-primary: #20bf6b; /* можно оставить или чуть приглушить */
-  }
-  body {
-    background-color: #121212;
-  }
-  .team-member, .patent-card, .partner-card {
-    background-color: #2a2a2a;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-  }
-  .step-card__image, .partner-card__image, .patent-card__image {
-    background-color: #333;
-  }
-  .sticky-header {
-    background-color: rgba(18, 18, 18, 0.95);
-  }
-  .map__container iframe {
-    filter: brightness(0.8) contrast(1.2);
-  }
-  .modal-content {
-    background: #2a2a2a;
-    color: #f0f0f0;
-  }
-  .modal-close {
-    color: #f0f0f0;
-  }
-  .button--primary {
-    background-color: #f0f0f0;
-    color: #121212;
-  }
+/* Тёмная тема – ручное управление */
+.dark-mode {
+  --color-light: #1a1a1a;
+  --color-dark: #f0f0f0;
+  --color-gray-light: #2a2a2a;
+  --color-text-muted: rgba(240, 240, 240, 0.7);
+}
+
+.dark-mode body {
+  background-color: #121212;
+}
+
+.dark-mode .team-member,
+.dark-mode .patent-card,
+.dark-mode .partner-card {
+  background-color: #2a2a2a;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.dark-mode .step-card__image,
+.dark-mode .partner-card__image,
+.dark-mode .patent-card__image {
+  background-color: #333;
+}
+
+.dark-mode .sticky-header {
+  background-color: rgba(18, 18, 18, 0.95);
+}
+
+.dark-mode .map__container iframe {
+  filter: brightness(0.8) contrast(1.2);
+}
+
+.dark-mode .modal-content {
+  background: #2a2a2a;
+  color: #f0f0f0;
+}
+
+.dark-mode .modal-close {
+  color: #f0f0f0;
+}
+
+.dark-mode .button--primary {
+  background-color: #f0f0f0;
+  color: #121212;
 }
