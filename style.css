@@ -257,7 +257,7 @@ section {
 
 /* ===== Contacts ===== */
 .contacts {
-  background-color: var(--color-light);
+  background-color: var(--color-primary);
 }
 
 .contacts__grid {
@@ -307,11 +307,16 @@ section {
   border: 0;
 }
 
-/* ===== Footer ===== */
+/* ===== Footer ===== 
 .page-footer {
   background-color: var(--color-light);
   border-top: 1px solid #e0e0e0;
   padding: 40px 0;
+} */
+
+.page-footer {
+  background-color: var(--color-primary);
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* слегка затемняем границу, если нужна */
 }
 
 .footer__inner {
@@ -456,7 +461,7 @@ section {
 /* ===== Разработки (патенты) ===== */
 .developments {
   padding: var(--spacing-section) 0;
-  background-color: var(--color-light);
+  background-color: var(--color-primary);  /* #c7f447 */
 }
 
 .developments__grid {
