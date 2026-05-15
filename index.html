@@ -268,20 +268,6 @@
               <p>г. Архангельск, набережная Северной Двины 22, ауд. 2418 (кафедра "Инженерных конструкций, архитектуры и графики", САФУ им М.В. Ломоносова)</p>
             </div>
           </div>
-          <!--<div class="contact-item">
-            <img src="img/icon-clock.png" alt="" class="contact-item__icon">
-            <div class="contact-item__content">
-              <h3 class="contact-item__title">Время работы</h3>
-              <p>Пн-Пт: 10:00–18:00<br>Сб-Вс: выходной</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <img src="img/icon-map.png" alt="" class="contact-item__icon">
-            <div class="contact-item__content">
-              <h3 class="contact-item__title">Как проехать</h3>
-              <p>Остановка общественного транспорта «Морской речной вокзал», далее — главный вход 2-го корпуса САФУ</p>
-            </div>
-          </div>-->
           <div class="contact-item">
             <div class="contact-item__icon" style="font-size: 2.5rem; line-height: 1;">📧</div>
             <div class="contact-item__content">
@@ -348,6 +334,17 @@
     modalText.innerHTML = `<h3 style="margin-top:0;">${title}</h3><p>${extraText}</p>`;
   }
 
+  // Назначаем обработчики на карточки членов команды
+  document.querySelectorAll('.team-member').forEach(card => {
+    card.addEventListener('click', () => {
+      const img = card.querySelector('.team-member__photo').src;
+      const title = card.querySelector('.team-member__name').innerText;
+      const type = card.querySelector('.team-member__desc').innerText;
+      openModal(img, title, type);
+    });
+    card.style.cursor = 'pointer';
+  });
+    
   // Назначаем обработчики на карточки партнёров
   document.querySelectorAll('.partner-card').forEach(card => {
     card.addEventListener('click', () => {
@@ -423,13 +420,13 @@
     const initialTheme = getPreferredTheme();
     setTheme(initialTheme);
     
-    // Обработчик на кнопку
+    /*/ Обработчик на кнопку
     if (toggleBtn) {
       toggleBtn.addEventListener('click', () => {
         const isDark = htmlElement.classList.contains('dark-mode');
         setTheme(isDark ? 'light' : 'dark');
       });
-    }
+    }*/
     
     // (Опционально) Следить за изменением системной темы, если нет ручного выбора
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
