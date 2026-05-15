@@ -334,16 +334,16 @@
     modalText.innerHTML = `<h3 style="margin-top:0;">${title}</h3><p>${extraText}</p>`;
   }
 
-  // Назначаем обработчики на карточки членов команды
-  document.querySelectorAll('.team-member').forEach(card => {
-    card.addEventListener('click', () => {
-      const img = card.querySelector('.team-member__photo').src;
-      const title = card.querySelector('.team-member__name').innerText;
-      const type = card.querySelector('.team-member__desc').innerText;
-      openModal(img, title, type);
-    });
-    card.style.cursor = 'pointer';
+// Назначаем обработчики на карточки членов команды
+document.querySelectorAll('.team-member').forEach(card => {
+  card.addEventListener('click', () => {
+    const img = card.querySelector('.team-member__photo img').src;   // ← исправлено
+    const title = card.querySelector('.team-member__name').innerText;
+    const desc = card.querySelector('.team-member__desc').innerText;
+    openModal(img, title, desc);
   });
+  card.style.cursor = 'pointer';
+});
     
   // Назначаем обработчики на карточки партнёров
   document.querySelectorAll('.partner-card').forEach(card => {
@@ -420,13 +420,13 @@
     const initialTheme = getPreferredTheme();
     setTheme(initialTheme);
     
-    /*/ Обработчик на кнопку
+    // Обработчик на кнопку
     if (toggleBtn) {
       toggleBtn.addEventListener('click', () => {
         const isDark = htmlElement.classList.contains('dark-mode');
         setTheme(isDark ? 'light' : 'dark');
       });
-    }*/
+    }
     
     // (Опционально) Следить за изменением системной темы, если нет ручного выбора
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
