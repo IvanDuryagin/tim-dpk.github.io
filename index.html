@@ -159,7 +159,6 @@
             <h3 class="team-member__name">Лабудин Борис Васильевич</h3>
             <p class="team-member__role">Научный руководитель</p>
             <p class="team-member__desc">доктор технических наук, профессор, член-корреспондент Российской академии архитектуры и строительных наук</p>
-            <div class="team-member__fullinfo" style="display:none;">Здесь напишите подробную биографию, достижения, список публикаций и т.д.</div>
           </div>
           <div class="team-member">
             <div class="team-member__photo">
@@ -168,7 +167,6 @@
             <h3 class="team-member__name">Попов Егор Вячеславович</h3>
             <p class="team-member__role">Руководитель проекта</p>
             <p class="team-member__desc">кандидат технических наук, доцент кафедры "Инженерных конструкций, архитектуры и графики", САФУ им. М.В. Ломоносова</p>
-            <div class="team-member__fullinfo" style="display:none;">Здесь напишите подробную биографию, достижения, список публикаций и т.д.</div>
           </div>
           <div class="team-member">
             <div class="team-member__photo">
@@ -177,7 +175,6 @@
             <h3 class="team-member__name">Дурягин Иван Александрович</h3>
             <p class="team-member__role">Инженер проекта</p>
             <p class="team-member__desc">аспирант кафедры "Инженерных конструкций, архитектуры и графики", САФУ им. М.В. Ломоносова</p>
-            <div class="team-member__fullinfo" style="display:none;">Здесь напишите подробную биографию, достижения, список публикаций и т.д.</div>
           </div>
         </div>
       </div>
@@ -245,10 +242,6 @@
               <h3 class="patent-card__title">Узловое комбинированное соединение деревокомпозитных конструкций</h3>
               <div class="patent-card__number">RU 229881 U1, 31.10.2024. Заявка № 2024114143 от 24.05.2024.</div>
               <p class="patent-card__desc">Попов Е.В., Лабудин Б.В., Столыпин Д.А., Чередниченко В.В., Починков М.В., Дурягин И.А.</p>
-              <div class="patent-card__extra" style="display:none;">
-                <p><strong>Область применения:</strong> Деревянное домостроение, большепролётные здания.</p>
-                <p><strong>Технический результат:</strong> Повышение несущей способности узла на 25%.</p>
-              </div>
             </div>
           </div>
           <div class="patent-card">
@@ -257,10 +250,6 @@
               <h3 class="patent-card__title">Составной деревокомпозитный элемент на когтевых шайбах</h3>
               <div class="patent-card__number">RU 229553 U1, 11.10.2024. Заявка № 2024114142 от 24.05.2024.</div>
               <p class="patent-card__desc">Попов Е.В., Лабудин Б.В., Столыпин Д.А., Чередниченко В.В., Копров О.В., Дурягин И.А.</p>
-              <div class="patent-card__extra" style="display:none;">
-                <p><strong>Область применения:</strong> Деревянное домостроение, большепролётные здания.</p>
-                <p><strong>Технический результат:</strong> Повышение несущей способности узла на 25%.</p>
-              </div>
             </div>
           </div>
         </div>
@@ -347,64 +336,46 @@
   </div>
 
   <script>
- // Модальное окно для карточек партнёров, патентов и команды
-const modal = document.getElementById('modal');
-const modalImg = document.getElementById('modal-img');
-const modalText = document.getElementById('modal-text');
-const closeBtn = document.querySelector('.modal-close');
+  // Модальное окно для карточек партнёров и патентов
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalText = document.getElementById('modal-text');
+  const closeBtn = document.querySelector('.modal-close');
 
-function openModal(imgSrc, title, extraText) {
-  modal.style.display = 'block';
-  modalImg.src = imgSrc;
-  modalText.innerHTML = `<h3 style="margin-top:0;">${title}</h3><p>${extraText}</p>`;
-}
+  function openModal(imgSrc, title, extraText) {
+    modal.style.display = 'block';
+    modalImg.src = imgSrc;
+    modalText.innerHTML = `<h3 style="margin-top:0;">${title}</h3><p>${extraText}</p>`;
+  }
 
-// 1. Партнёры
-document.querySelectorAll('.partner-card').forEach(card => {
-  card.addEventListener('click', () => {
-    const img = card.querySelector('.partner-card__image').src;
-    const title = card.querySelector('.partner-card__title').innerText;
-    const type = card.querySelector('.partner-card__type').innerText;
-    openModal(img, title, type);
+  // Назначаем обработчики на карточки партнёров
+  document.querySelectorAll('.partner-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const img = card.querySelector('.partner-card__image').src;
+      const title = card.querySelector('.partner-card__title').innerText;
+      const type = card.querySelector('.partner-card__type').innerText;
+      openModal(img, title, type);
+    });
+    card.style.cursor = 'pointer';
   });
-  card.style.cursor = 'pointer';
-});
 
-// 2. Патенты (с учётом дополнительного блока)
-document.querySelectorAll('.patent-card').forEach(card => {
-  card.addEventListener('click', () => {
-    const img = card.querySelector('.patent-card__image').src;
-    const title = card.querySelector('.patent-card__title').innerText;
-    const number = card.querySelector('.patent-card__number').innerText;
-    const authors = card.querySelector('.patent-card__desc').innerText;
-    const extraBlock = card.querySelector('.patent-card__extra');
-    const extraHtml = extraBlock ? extraBlock.innerHTML : '';
-    const fullText = `<strong>${number}</strong><br><br>Авторы: ${authors}<br><br>${extraHtml}`;
-    openModal(img, title, fullText);
+  // Назначаем обработчики на карточки патентов
+  document.querySelectorAll('.patent-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const img = card.querySelector('.patent-card__image').src;
+      const title = card.querySelector('.patent-card__title').innerText;
+      const number = card.querySelector('.patent-card__number').innerText;
+      const desc = card.querySelector('.patent-card__desc').innerText;
+      openModal(img, title, `${number}<br><br>${desc}`);
+    });
+    card.style.cursor = 'pointer';
   });
-  card.style.cursor = 'pointer';
-});
 
-// 3. Команда
-document.querySelectorAll('.team-member').forEach(member => {
-  member.addEventListener('click', () => {
-    const img = member.querySelector('.team-member__photo img')?.src || '';
-    const name = member.querySelector('.team-member__name').innerText;
-    const role = member.querySelector('.team-member__role').innerText;
-    const shortDesc = member.querySelector('.team-member__desc').innerText;
-    const fullInfoBlock = member.querySelector('.team-member__fullinfo');
-    let fullText = `<strong>${role}</strong><br><br>${shortDesc}`;
-    if (fullInfoBlock) {
-      fullText += `<br><br>${fullInfoBlock.innerHTML}`;
-    }
-    openModal(img, name, fullText);
-  });
-  member.style.cursor = 'pointer';
-});
-
-// Закрытие по крестику и по клику вне модалки
-closeBtn.onclick = () => modal.style.display = 'none';
-window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+  // Закрытие по крестику
+  closeBtn.onclick = () => modal.style.display = 'none';
+  // Закрытие по клику вне контента
+  window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+</script>
     
   <script>
   // Плавное появление секций при скролле
