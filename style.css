@@ -817,9 +817,20 @@ section {
 }
 
 .developments__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 40px;
+  justify-content: center;
+}
+
+.patent-card {
+  flex: 0 0 360px;
+  max-width: 360px;
+  background-color: var(--color-light);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .patent-card {
@@ -875,6 +886,10 @@ section {
 @media (max-width: 768px) {
   .developments__grid {
     gap: 30px;
+  }
+  .patent-card {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
   .patent-card__title {
     font-size: 1.2rem;
