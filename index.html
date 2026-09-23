@@ -3,32 +3,185 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ТИМ-ДПК — Перенос данных из BIM в расчётные программы</title>
+  <title>ТИМ-ДПК — перенос данных из BIM в расчётные программы</title>
   <meta name="description" content="Программа для автоматического переноса данных об узлах ДПК из ТИМ-моделей в МКЭ-комплексы без потерь.">
   <meta property="og:title" content="ТИМ-ДПК">
   <meta property="og:description" content="Перенос данных об узлах ДПК из САПР в расчётные программы без потерь!">
-  <meta property="og:image" content="img/og-image.png">
+  <meta property="og:image" content="https://ivanduryagin.github.io/IvanDuryagin.github.io-tim-dpk/img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
-  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://ivanduryagin.github.io/IvanDuryagin.github.io-tim-dpk/">
+
+  <!-- Доп. SEO -->
+  <meta name="theme-color" content="#20bf6b" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ivanduryagin.github.io/IvanDuryagin.github.io-tim-dpk/">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ТИМ-ДПК",
+    "alternateName": "Перенос данных из BIM в расчётные программы",
+    "url": "https://ivanduryagin.github.io/IvanDuryagin.github.io-tim-dpk/",
+    "logo": "https://ivanduryagin.github.io/IvanDuryagin.github.io-tim-dpk/img/favicon-180.png",
+    "description": "Программа для автоматического переноса данных об узлах ДПК из ТИМ-моделей в МКЭ-комплексы без потерь.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "наб. Северной Двины, 22, ауд. 2418",
+      "addressLocality": "Архангельск",
+      "addressCountry": "RU"
+    },
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+7-952-250-70-69",
+      "email": "duryagin1995@yandex.ru",
+      "contactType": "customer support",
+      "availableLanguage": "Russian"
+    }],
+    "sameAs": [
+      "https://github.com/IvanDuryagin/dpk-tim"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ТИМ-ДПК",
+    "applicationCategory": "EngineeringApplication",
+    "operatingSystem": "Windows",
+    "description": "Программа для переноса данных об узлах соединений из BIM-моделей в расчётные МКЭ-комплексы через IFC.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "RUB" }
+  }
+  </script>
+
+  <!-- JSON-LD: члены команды -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Команда проекта ТИМ-ДПК",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "item": {
+          "@type": "Person",
+          "name": "Лабудин Борис Васильевич",
+          "jobTitle": "Научный руководитель",
+          "affiliation": "САФУ им. М.В. Ломоносова"
+      }},
+      { "@type": "ListItem", "position": 2, "item": {
+          "@type": "Person",
+          "name": "Попов Егор Вячеславович",
+          "jobTitle": "Руководитель проекта",
+          "affiliation": "САФУ им. М.В. Ломоносова"
+      }},
+      { "@type": "ListItem", "position": 3, "item": {
+          "@type": "Person",
+          "name": "Дурягин Иван Александрович",
+          "jobTitle": "Инженер проекта"
+      }}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: научные публикации -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Научные публикации проекта ТИМ-ДПК",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "item": {
+          "@type": "ScholarlyArticle",
+          "name": "Узловое пазогреневое соединение стен из CLT-панелей",
+          "url": "https://elibrary.ru/item.asp?id=80279875"
+      }},
+      { "@type": "ListItem", "position": 2, "item": {
+          "@type": "ScholarlyArticle",
+          "name": "Совершенствование составных деревянных элементов на комбинированных механических связях для транспортной инфраструктуры",
+          "url": "https://elibrary.ru/item.asp?id=80380715"
+      }},
+      { "@type": "ListItem", "position": 3, "item": {
+          "@type": "ScholarlyArticle",
+          "name": "Составной деревокомпозитный элемент на когтевых шайбах",
+          "url": "https://elibrary.ru/item.asp?id=73416655"
+      }},
+      { "@type": "ListItem", "position": 4, "item": {
+          "@type": "ScholarlyArticle",
+          "name": "Узловое комбинированное соединение деревокомпозитных конструкций",
+          "url": "https://elibrary.ru/item.asp?id=75122535"
+      }}
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: разработки (патенты) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Разработки ТИМ-ДПК",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "item": {
+          "@type": "CreativeWork",
+          "name": "Узловое комбинированное соединение деревокомпозитных конструкций",
+          "identifier": "RU 229881 U1",
+          "datePublished": "2024-10-31"
+      }},
+      { "@type": "ListItem", "position": 2, "item": {
+          "@type": "CreativeWork",
+          "name": "Составной деревокомпозитный элемент на когтевых шайбах",
+          "identifier": "RU 229553 U1",
+          "datePublished": "2024-10-11"
+      }}
+    ]
+  }
+  </script>
+
   <!-- Предзагрузка шрифтов (локально) -->
   <link rel="preload" href="fonts/ubuntu.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/open-sans.woff2" as="font" type="font/woff2" crossorigin>
-  
+
   <!-- Основной файл стилей -->
   <link rel="stylesheet" href="style.css">
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌳%3C/text%3E%3C/svg%3E">
+
+  <!-- Web component для интерактивной 3D-модели -->
+  <script type="module"
+          src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 <body>
 
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
 <header class="sticky-header">
   <div class="container header-container">
-    <a href="#" class="header-logo">ТИМ-ДПК</a>
-    <nav class="header-nav">
+    <a href="#" class="header-logo" aria-label="ТИМ-ДПК — на главную">ТИМ-ДПК</a>
+
+    <button class="burger"
+            id="burger"
+            type="button"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+            aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="header-nav" id="primary-nav" aria-label="Основная навигация">
       <a href="#about">О проекте</a>
       <a href="#steps">Алгоритм</a>
       <a href="#tech">Технологии</a>
@@ -37,18 +190,51 @@
       <a href="#developments">Разработки</a>
       <a href="#contacts">Контакты</a>
     </nav>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">Тёмная тема</button>
+
+    <div class="header-actions">
+      <button id="theme-toggle"
+              class="theme-toggle"
+              type="button"
+              aria-label="Переключить тему"
+              aria-pressed="false">Тёмная тема</button>
+    </div>
   </div>
 </header>
 
-  
   <main class="site-main">
-    <!-- Hero section (бывший call-to-action) -->
+    <!-- Hero section -->
     <section class="hero">
-      <div class="container">
-        <h1 class="hero__title">ТИМ-ДПК</h1>
-        <p class="hero__subtitle">Перенос данных об узлах ДПК из САПР в расчётные программы без потерь!</p>
-        <a href="https://disk.yandex.ru/i/Gv4EEAuZt6lhMQ" class="button button--primary" target="_blank" rel="noopener">Скачать информационный лист</a>
+      <div class="hero__bg" aria-hidden="true">
+        <model-viewer
+          src="models/dpk-node.glb"
+          poster="img/hero-model-poster.jpg"
+          alt=""
+          camera-controls
+          auto-rotate
+          auto-rotate-delay="1500"
+          rotation-per-second="15deg"
+          shadow-intensity="1"
+          exposure="1"
+          environment-image="neutral"
+          loading="eager"
+          disable-zoom
+          interaction-prompt="none"
+          touch-action="pan-y">
+          <div slot="poster" class="hero__viewer-fallback">
+            <span aria-hidden="true">🌳</span>
+            <p>Интерактивная 3D-модель узла</p>
+          </div>
+        </model-viewer>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">ТИМ-ДПК</h1>
+          <p class="hero__subtitle">Перенос данных об узлах ДПК из САПР в расчётные программы без потерь!</p>
+          <a href="https://disk.yandex.ru/i/Gv4EEAuZt6lhMQ"
+             class="button button--primary"
+             target="_blank" rel="noopener">Скачать информационный лист</a>
+        </div>
       </div>
     </section>
 
@@ -60,18 +246,19 @@
           <p>«ТИМ-ДПК» — это программа с частично открытым исходным кодом, которая автоматически переносит данные об узлах соединений из BIM-моделей (Archicad, Revit) в форматы, понятные расчётным МКЭ-комплексам (ANSYS, SCAD).</p>
           <p>Цель — ускорить подготовку расчётных схем и исключить ошибки ручного ввода.</p>
         </div>
+
         <h2 class="section-title">Научные публикации</h2>
         <div class="about__content">
           <p class="pub-title">1. Узловое пазогреневое соединение стен из CLT-панелей</p>
           <p class="pub-link"><a href="https://elibrary.ru/item.asp?id=80279875" target="_blank" rel="noopener">https://elibrary.ru/item.asp?id=80279875</a></p>
 
-          <p class="pub-title">2. Совершенствование составных деревянных элементов на коминированных механических связях для транспортной инфраструктуры</p>
+          <p class="pub-title">2. Совершенствование составных деревянных элементов на комбинированных механических связях для транспортной инфраструктуры</p>
           <p class="pub-link"><a href="https://elibrary.ru/item.asp?id=80380715" target="_blank" rel="noopener">https://elibrary.ru/item.asp?id=80380715</a></p>
 
           <p class="pub-title">3. Составной деревокомпозитный элемент на когтевых шайбах</p>
           <p class="pub-link"><a href="https://elibrary.ru/item.asp?id=73416655" target="_blank" rel="noopener">https://elibrary.ru/item.asp?id=73416655</a></p>
 
-          <p class="pub-title">4. Узловое коминированное соединение деревокомпозитных конструкций</p>
+          <p class="pub-title">4. Узловое комбинированное соединение деревокомпозитных конструкций</p>
           <p class="pub-link"><a href="https://elibrary.ru/item.asp?id=75122535" target="_blank" rel="noopener">https://elibrary.ru/item.asp?id=75122535</a></p>
 
           <p class="pub-title">5. Исследование деревянных балок, усиленных внешним армированием</p>
@@ -83,58 +270,93 @@
       </div>
     </section>
 
-    <!-- Алгоритм работы (бывший product-list) -->
+    <!-- Алгоритм работы -->
     <section class="steps" id="steps">
       <div class="container">
         <h2 class="section-title">Алгоритм работы</h2>
         <div class="steps__list">
           <article class="step-card">
-            <img src="img/step1.png" alt="Шаг 1" class="step-card__image" loading="lazy">
+            <picture>
+              <source srcset="img/step1.webp" type="image/webp">
+              <img src="img/step1.png" alt="Шаг 1. Экспорт BIM-модели в IFC"
+                   class="step-card__image" width="600" height="600"
+                   loading="lazy" decoding="async">
+            </picture>
             <div class="step-card__body">
               <h3 class="step-card__title">Шаг 1. Экспорт BIM-модели в IFC</h3>
               <p class="step-card__desc">Пользователь экспортирует трёхмерную модель из Archicad, Revit или Renga в открытый формат IFC, сохраняя геометрию, слоистую структуру ДПК-панелей и данные о нагрузках.</p>
             </div>
           </article>
+
           <article class="step-card">
-            <img src="img/step2.png" alt="Шаг 2" class="step-card__image" loading="lazy">
+            <picture>
+              <source srcset="img/step2.webp" type="image/webp">
+              <img src="img/step2.png" alt="Шаг 2. Загрузка IFC в ядро ТИМ-ДПК"
+                   class="step-card__image" width="600" height="600"
+                   loading="lazy" decoding="async">
+            </picture>
             <div class="step-card__body">
               <h3 class="step-card__title">Шаг 2. Загрузка IFC в ядро «ТИМ-ДПК»</h3>
               <p class="step-card__desc">Программа парсит IFC-файл, идентифицирует все CLT/ДПК-панели (объекты IfcPlate) и извлекает их геометрию, толщину, ориентацию слоёв и уникальные идентификаторы.</p>
             </div>
           </article>
+
           <article class="step-card">
-            <img src="img/step3.png" alt="Шаг 3" class="step-card__image" loading="lazy">
+            <picture>
+              <source srcset="img/step3.webp" type="image/webp">
+              <img src="img/step3.png" alt="Шаг 3. Обнаружение узлов соединений"
+                   class="step-card__image" width="600" height="600"
+                   loading="lazy" decoding="async">
+            </picture>
             <div class="step-card__body">
               <h3 class="step-card__title">Шаг 3. Обнаружение и классификация узлов соединений</h3>
-              <p class="step-card__desc">Алгоритм пространственного анализа находит места контакта панелей (пересечение ограничивающих параллелепипедов, общие грани) и определяет тип узла (угловой, Т-образный, крестовый, нахлёст).</p>
+              <p class="step-card__desc">Алгоритм пространственного анализа находит места контакта панелей и определяет тип узла (угловой, Т-образный, крестовый, нахлёст).</p>
             </div>
           </article>
+
           <article class="step-card">
-            <img src="img/step4.png" alt="Шаг 4" class="step-card__image" loading="lazy">
+            <picture>
+              <source srcset="img/step4.webp" type="image/webp">
+              <img src="img/step4.png" alt="Шаг 4. Формирование JSON-спецификации"
+                   class="step-card__image" width="600" height="600"
+                   loading="lazy" decoding="async">
+            </picture>
             <div class="step-card__body">
               <h3 class="step-card__title">Шаг 4. Формирование JSON-спецификации</h3>
               <p class="step-card__desc">На основе собранных данных создаётся структурированный JSON-файл — машиночитаемое техническое задание, содержащее все характеристики узлов, материалов и нагрузок.</p>
             </div>
           </article>
+
           <article class="step-card">
-            <img src="img/step5.png" alt="Шаг 5" class="step-card__image" loading="lazy">
+            <picture>
+              <source srcset="img/step5.webp" type="image/webp">
+              <img src="img/step5.png" alt="Шаг 5. Генерация скрипта для МКЭ"
+                   class="step-card__image" width="600" height="600"
+                   loading="lazy" decoding="async">
+            </picture>
             <div class="step-card__body">
               <h3 class="step-card__title">Шаг 5. Генерация скрипта для целевого МКЭ-пакета</h3>
               <p class="step-card__desc">Конвертер преобразует JSON в APDL-скрипт для ANSYS, командный файл для SCAD/LIRA или скрипт для Rhino+Grasshopper.</p>
             </div>
           </article>
+
           <article class="step-card">
-            <img src="img/step6.png" alt="Шаг 6" class="step-card__image" loading="lazy">
+            <picture>
+              <source srcset="img/step6.webp" type="image/webp">
+              <img src="img/step6.png" alt="Шаг 6. Расчёт в МКЭ"
+                   class="step-card__image" width="600" height="600"
+                   loading="lazy" decoding="async">
+            </picture>
             <div class="step-card__body">
               <h3 class="step-card__title">Шаг 6. Расчёт в конечно-элементном комплексе</h3>
-              <p class="step-card__desc">Инженер запускает сгенерированный скрипт в выбранной среде и получает готовую конечно-элементную модель с назначенными свойствами, контактами и нагрузками, после чего выполняет расчёт и анализирует результаты.</p>
+              <p class="step-card__desc">Инженер запускает сгенерированный скрипт в выбранной среде и получает готовую конечно-элементную модель с назначенными свойствами, контактами и нагрузками.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Технологии и стек (бывший faq) -->
+    <!-- Технологии -->
     <section class="tech" id="tech">
       <div class="container">
         <h2 class="section-title">Технологии и стек</h2>
@@ -167,81 +389,123 @@
       </div>
     </section>
 
-    <!-- Команда проекта -->
+    <!-- Команда -->
     <section class="team team--gradient" id="team">
       <div class="container">
         <h2 class="section-title">Команда проекта</h2>
         <div class="team__grid">
           <div class="team-member">
             <div class="team-member__photo">
-              <img src="img/team-labudin.jpg" alt="Лабудин Борис Васильевич" loading="lazy">
+              <picture>
+                <source srcset="img/team-labudin.webp" type="image/webp">
+                <img src="img/team-labudin.jpg" alt="Лабудин Борис Васильевич"
+                     width="600" height="600" loading="lazy" decoding="async">
+              </picture>
             </div>
             <h3 class="team-member__name">Лабудин Борис Васильевич</h3>
             <p class="team-member__role">Научный руководитель</p>
-            <p class="team-member__desc">доктор технических наук, профессор, член-корреспондент Российской академии архитектуры и строительных наук</p>
+            <p class="team-member__desc">доктор технических наук, профессор, член-корреспондент РААСН</p>
           </div>
           <div class="team-member">
             <div class="team-member__photo">
-              <img src="img/team-popov.png" alt="Попов Егор Вячеславович" loading="lazy">
+              <picture>
+                <source srcset="img/team-popov.webp" type="image/webp">
+                <img src="img/team-popov.png" alt="Попов Егор Вячеславович"
+                     width="600" height="600" loading="lazy" decoding="async">
+              </picture>
             </div>
             <h3 class="team-member__name">Попов Егор Вячеславович</h3>
             <p class="team-member__role">Руководитель проекта</p>
-            <p class="team-member__desc">кандидат технических наук, доцент кафедры "Инженерных конструкций, архитектуры и графики", САФУ им. М.В. Ломоносова</p>
+            <p class="team-member__desc">кандидат технических наук, доцент кафедры «Инженерных конструкций, архитектуры и графики», САФУ им. М.В. Ломоносова</p>
           </div>
           <div class="team-member">
             <div class="team-member__photo">
-              <img src="img/team-duryagin.png" alt="Дурягин Иван Александрович" loading="lazy">
+              <picture>
+                <source srcset="img/team-duryagin.webp" type="image/webp">
+                <img src="img/team-duryagin.png" alt="Дурягин Иван Александрович"
+                     width="600" height="600" loading="lazy" decoding="async">
+              </picture>
             </div>
             <h3 class="team-member__name">Дурягин Иван Александрович</h3>
             <p class="team-member__role">Инженер проекта</p>
-            <p class="team-member__desc">аспирант кафедры "Инженерных конструкций, архитектуры и графики", САФУ им. М.В. Ломоносова</p>
+            <p class="team-member__desc">аспирант кафедры «Инженерных конструкций, архитектуры и графики», САФУ им. М.В. Ломоносова</p>
           </div>
         </div>
       </div>
     </section>
-    
-    <!-- Наши партнёры -->
+
+    <!-- Партнёры -->
     <section class="partners" id="partners">
       <div class="container">
         <h2 class="section-title">Партнёры проекта</h2>
         <div class="partners__grid">
           <div class="partner-card">
-            <img src="img/letter1.jpg" alt="Письмо о заинтересованности" class="partner-card__image" loading="lazy">
+            <picture>
+              <source srcset="img/letter1.webp" type="image/webp">
+              <img src="img/letter1.jpg" alt="Письмо о заинтересованности"
+                   class="partner-card__image" width="600" height="840"
+                   loading="lazy" decoding="async">
+            </picture>
             <div class="partner-card__info">
               <h3 class="partner-card__title">ООО «ГражданПроект»</h3>
               <p class="partner-card__type">Проектная организация (г. Архангельск)</p>
             </div>
           </div>
           <div class="partner-card">
-            <img src="img/letter2.jpg" alt="Письмо о заинтересованности" class="partner-card__image" loading="lazy">
+            <picture>
+              <source srcset="img/letter2.webp" type="image/webp">
+              <img src="img/letter2.jpg" alt="Письмо о заинтересованности"
+                   class="partner-card__image" width="600" height="840"
+                   loading="lazy" decoding="async">
+            </picture>
             <div class="partner-card__info">
               <h3 class="partner-card__title">ООО «Инженерно-технические решения и снабжение»</h3>
               <p class="partner-card__type">Проектная организация (г. Северодвинск, Архангельской обл.)</p>
             </div>
           </div>
           <div class="partner-card">
-            <img src="img/letter3.jpg" alt="Письмо о заинтересованности" class="partner-card__image" loading="lazy">
+            <picture>
+              <source srcset="img/letter3.webp" type="image/webp">
+              <img src="img/letter3.jpg" alt="Письмо о заинтересованности"
+                   class="partner-card__image" width="600" height="840"
+                   loading="lazy" decoding="async">
+            </picture>
             <div class="partner-card__info">
               <h3 class="partner-card__title">ООО «Обследование и экспертиза зданий и сооружений»</h3>
               <p class="partner-card__type">Экспертная организация (г. Архангельск)</p>
             </div>
           </div>
           <div class="partner-card">
-            <img src="img/letter4.jpg" alt="Письмо о заинтересованности" class="partner-card__image" loading="lazy">
+            <picture>
+              <source srcset="img/letter4.webp" type="image/webp">
+              <img src="img/letter4.jpg" alt="Письмо о заинтересованности"
+                   class="partner-card__image" width="600" height="840"
+                   loading="lazy" decoding="async">
+            </picture>
             <div class="partner-card__info">
               <h3 class="partner-card__title">ООО «СтройГрадСервис»</h3>
               <p class="partner-card__type">Проектная организация (г. Россошь, Воронежской обл.)</p>
             </div>
           </div>
           <div class="partner-card">
-            <img src="img/letter5.jpg" alt="Письмо о заинтересованности" class="partner-card__image" loading="lazy">
+            <picture>
+              <source srcset="img/letter5.webp" type="image/webp">
+              <img src="img/letter5.jpg" alt="Письмо о заинтересованности"
+                   class="partner-card__image" width="600" height="840"
+                   loading="lazy" decoding="async">
+            </picture>
             <div class="partner-card__info">
               <h3 class="partner-card__title">ГАУ «Штаб молодёжных трудовых отрядов Архангельской области»</h3>
               <p class="partner-card__type">Государственное автономное учреждение (г. Архангельск)</p>
             </div>
           </div>
           <div class="partner-card">
-            <img src="img/letter6.jpg" alt="Письмо о заинтересованности" class="partner-card__image" loading="lazy">
+            <picture>
+              <source srcset="img/letter6.webp" type="image/webp">
+              <img src="img/letter6.jpg" alt="Письмо о заинтересованности"
+                   class="partner-card__image" width="600" height="840"
+                   loading="lazy" decoding="async">
+            </picture>
             <div class="partner-card__info">
               <h3 class="partner-card__title">ИП Яковлева Елена Васильевна</h3>
               <p class="partner-card__type">Индивидуальный предприниматель в сфере проектирования (г. Архангельск)</p>
@@ -251,21 +515,31 @@
       </div>
     </section>
 
-    <!-- Наши разработки (патенты) -->
+    <!-- Разработки (патенты) -->
     <section class="developments" id="developments">
       <div class="container">
         <h2 class="section-title section-title--center">Наши разработки</h2>
         <div class="developments__grid">
-          <div class="patent-card">
-            <img src="img/patent2.jpeg" alt="Патент на полезную модель RU 229881" class="patent-card__image" loading="lazy">
+          <div class="patent-card" data-model="">
+            <picture>
+              <source srcset="img/patent2.webp" type="image/webp">
+              <img src="img/patent2.jpeg" alt="Патент на полезную модель RU 229881"
+                   class="patent-card__image" width="600" height="840"
+                   loading="lazy" decoding="async">
+            </picture>
             <div class="patent-card__info">
               <h3 class="patent-card__title">Узловое комбинированное соединение деревокомпозитных конструкций</h3>
               <div class="patent-card__number">RU 229881 U1, 31.10.2024. Заявка № 2024114143 от 24.05.2024.</div>
               <p class="patent-card__desc">Попов Е.В., Лабудин Б.В., Столыпин Д.А., Чередниченко В.В., Починков М.В., Дурягин И.А.</p>
             </div>
           </div>
-          <div class="patent-card">
-            <img src="img/patent1.jpeg" alt="Патент на полезную модель RU 229553" class="patent-card__image" loading="lazy">
+          <div class="patent-card" data-model="">
+            <picture>
+              <source srcset="img/patent1.webp" type="image/webp">
+              <img src="img/patent1.jpeg" alt="Патент на полезную модель RU 229553"
+                   class="patent-card__image" width="600" height="840"
+                   loading="lazy" decoding="async">
+            </picture>
             <div class="patent-card__info">
               <h3 class="patent-card__title">Составной деревокомпозитный элемент на когтевых шайбах</h3>
               <div class="patent-card__number">RU 229553 U1, 11.10.2024. Заявка № 2024114142 от 24.05.2024.</div>
@@ -275,7 +549,7 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Контакты -->
     <section class="contacts" id="contacts">
       <div class="container">
@@ -285,7 +559,7 @@
             <div class="contact-item__icon" style="font-size: 2.5rem; line-height: 1;">🏠</div>
             <div class="contact-item__content">
               <h3 class="contact-item__title">Адрес</h3>
-              <p>г. Архангельск, набережная Северной Двины 22, ауд. 2418 (кафедра "Инженерных конструкций, архитектуры и графики", САФУ им М.В. Ломоносова)</p>
+              <p>г. Архангельск, набережная Северной Двины 22, ауд. 2418 (кафедра «Инженерных конструкций, архитектуры и графики», САФУ им. М.В. Ломоносова)</p>
             </div>
           </div>
           <div class="contact-item">
@@ -303,12 +577,12 @@
     <!-- Карта -->
     <section class="map">
       <div class="map__container">
-        <iframe 
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3A9656a015b252f015a0b6656f6b3f0c5ac35fe5002d817dbff61744ae1c24b570&amp;source=constructor" 
-          width="100%" 
-          height="320" 
-          frameborder="0" 
-          allowfullscreen 
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A9656a015b252f015a0b6656f6b3f0c5ac35fe5002d817dbff61744ae1c24b570&amp;source=constructor"
+          width="100%"
+          height="320"
+          frameborder="0"
+          allowfullscreen
           style="display:block; border:0;"
           title="Карта расположения кафедры САФУ в Архангельске">
         </iframe>
@@ -321,79 +595,186 @@
         <span class="footer__logo">ТИМ-ДПК</span>
         <nav class="footer__nav">
           <a href="#about">О проекте</a>
-          <a href="#steps">Алгоритм работы</a>
+          <a href="#steps">Алгоритм</a>
           <a href="#tech">Технологии</a>
           <a href="#team">Команда</a>
           <a href="#partners">Партнёры</a>
           <a href="#developments">Разработки</a>
         </nav>
-        <small class="footer__copy"> ТИМ-ДПК 2026</small>
+        <small class="footer__copy">ТИМ-ДПК 2026</small>
       </div>
     </div>
   </footer>
 
 <!-- Модальное окно -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="modal-close">&times;</span>
-      <img id="modal-img" class="modal-img" src="" alt="">
-      <div id="modal-text" class="modal-text"></div>
+<dialog id="modal"
+        class="modal"
+        aria-labelledby="modal-title"
+        aria-modal="true">
+  <form method="dialog" class="modal__form">
+    <button class="modal-close" type="submit" aria-label="Закрыть окно">&times;</button>
+  </form>
+
+  <div class="modal-media">
+    <img id="modal-img" class="modal-img" src="" alt="">
+
+    <div id="modal-model-wrap" class="modal-model-wrap" hidden>
+      <model-viewer id="modal-model" class="modal-model"
+                    camera-controls
+                    auto-rotate
+                    auto-rotate-delay="800"
+                    rotation-per-second="20deg"
+                    shadow-intensity="1"
+                    exposure="1"
+                    environment-image="neutral"
+                    touch-action="none"
+                    ar
+                    ar-modes="webxr scene-viewer quick-look">
+      </model-viewer>
     </div>
   </div>
 
-  <script>
-  // Модальное окно для карточек партнёров и патентов
-  const modal = document.getElementById('modal');
-  const modalImg = document.getElementById('modal-img');
-  const modalText = document.getElementById('modal-text');
-  const closeBtn = document.querySelector('.modal-close');
+  <div id="modal-text" class="modal-text"></div>
+</dialog>
 
-  function openModal(imgSrc, title, extraText) {
-    modal.style.display = 'block';
-    modalImg.src = imgSrc;
-    modalText.innerHTML = `<h3 style="margin-top:0;">${title}</h3><p>${extraText}</p>`;
+<script>
+(function () {
+  'use strict';
+
+  /* ============ 1. Модальное окно (нативный <dialog>) ============ */
+  const modal        = document.getElementById('modal');
+  const modalImg     = document.getElementById('modal-img');
+  const modalText    = document.getElementById('modal-text');
+  const modalModel   = document.getElementById('modal-model');
+  const modelWrap    = document.getElementById('modal-model-wrap');
+
+  function openModal({ imgSrc, modelSrc, title, extraText }) {
+    if (modelSrc) {
+      modalImg.hidden = true;
+      modalImg.removeAttribute('src');
+      modelWrap.hidden = false;
+      modalModel.setAttribute('src', modelSrc);
+      modalText.hidden = true;
+      modalText.innerHTML = '';
+    } else {
+      modelWrap.hidden = true;
+      modalModel.removeAttribute('src');
+      modalImg.hidden = false;
+      modalImg.src = imgSrc;
+      modalImg.alt = title;
+      modalText.hidden = false;
+      modalText.innerHTML =
+        `<h3 id="modal-title" class="modal__title">${title}</h3><p>${extraText}</p>`;
+    }
+    modal.showModal();
+    document.body.style.overflow = 'hidden';
   }
 
-// Назначаем обработчики на карточки членов команды
-document.querySelectorAll('.team-member').forEach(card => {
-  card.addEventListener('click', () => {
-    const img = card.querySelector('.team-member__photo img').src;   // ← исправлено
-    const title = card.querySelector('.team-member__name').innerText;
-    const desc = card.querySelector('.team-member__desc').innerText;
-    openModal(img, title, desc);
+  modal.addEventListener('close', () => {
+    document.body.style.overflow = '';
+    modalImg.removeAttribute('src');
+    modalImg.hidden = false;
+    modelWrap.hidden = true;
+    modalModel.removeAttribute('src');
+    modalText.hidden = false;
   });
-  card.style.cursor = 'pointer';
-});
-    
-  // Назначаем обработчики на карточки партнёров
+
+  modal.addEventListener('click', (e) => {
+    const rect = modal.getBoundingClientRect();
+    const inDialog =
+      e.clientX >= rect.left && e.clientX <= rect.right &&
+      e.clientY >= rect.top  && e.clientY <= rect.bottom;
+    if (!inDialog) modal.close();
+  });
+
+  /* ============ 2. Карточки доступны с клавиатуры ============ */
+  function makeInteractive(card, handler) {
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('click', handler);
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault();
+        handler();
+      }
+    });
+  }
+
+  document.querySelectorAll('.team-member').forEach(card => {
+    makeInteractive(card, () => {
+      const imgEl = card.querySelector('.team-member__photo img');
+      openModal({
+        imgSrc: imgEl.currentSrc || imgEl.src,
+        title:  card.querySelector('.team-member__name').innerText,
+        extraText: card.querySelector('.team-member__desc').innerText,
+      });
+    });
+  });
+
   document.querySelectorAll('.partner-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const img = card.querySelector('.partner-card__image').src;
-      const title = card.querySelector('.partner-card__title').innerText;
-      const type = card.querySelector('.partner-card__type').innerText;
-      openModal(img, title, type);
+    makeInteractive(card, () => {
+      const imgEl = card.querySelector('.partner-card__image');
+      openModal({
+        imgSrc: imgEl.currentSrc || imgEl.src,
+        title:  card.querySelector('.partner-card__title').innerText,
+        extraText: card.querySelector('.partner-card__type').innerText,
+      });
     });
-    card.style.cursor = 'pointer';
   });
 
-  // Назначаем обработчики на карточки патентов
   document.querySelectorAll('.patent-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const img = card.querySelector('.patent-card__image').src;
-      const title = card.querySelector('.patent-card__title').innerText;
+    makeInteractive(card, () => {
+      const imgEl  = card.querySelector('.patent-card__image');
+      const img    = imgEl.currentSrc || imgEl.src;
+      const model  = card.dataset.model || '';
+      const title  = card.querySelector('.patent-card__title').innerText;
       const number = card.querySelector('.patent-card__number').innerText;
-      const desc = card.querySelector('.patent-card__desc').innerText;
-      openModal(img, title, `${number}<br><br>${desc}`);
+      const desc   = card.querySelector('.patent-card__desc').innerText;
+
+      openModal({
+        imgSrc: img,
+        modelSrc: model,
+        title,
+        extraText: `${number}<br><br>${desc}`,
+      });
     });
-    card.style.cursor = 'pointer';
   });
 
-  // Закрытие по крестику
-  closeBtn.onclick = () => modal.style.display = 'none';
-  // Закрытие по клику вне контента
-  window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+  /* ============ 3. Бургер-меню ============ */
+  const burger = document.getElementById('burger');
+  const nav    = document.getElementById('primary-nav');
+
+  function closeNav() {
+    burger.setAttribute('aria-expanded', 'false');
+    burger.setAttribute('aria-label', 'Открыть меню');
+    nav.classList.remove('is-open');
+    document.body.classList.remove('nav-open');
+  }
+
+  function openNav() {
+    burger.setAttribute('aria-expanded', 'true');
+    burger.setAttribute('aria-label', 'Закрыть меню');
+    nav.classList.add('is-open');
+    document.body.classList.add('nav-open');
+  }
+
+  burger.addEventListener('click', () => {
+    const isOpen = burger.getAttribute('aria-expanded') === 'true';
+    isOpen ? closeNav() : openNav();
+  });
+
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav.classList.contains('is-open')) closeNav();
+  });
+
+  window.matchMedia('(min-width: 901px)').addEventListener('change', (e) => {
+    if (e.matches) closeNav();
+  });
+})();
 </script>
-    
+
   <script>
   // Плавное появление секций при скролле
     const sections = document.querySelectorAll('section');
@@ -404,59 +785,159 @@ document.querySelectorAll('.team-member').forEach(card => {
         }
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-  
+
     sections.forEach(section => {
       section.classList.add('section-fade');
       observer.observe(section);
     });
   </script>
 
-  <script>
-  (function() {
-    const toggleBtn = document.getElementById('theme-toggle');
-    const htmlElement = document.documentElement; // <html>
-    
-    // Функция применения темы
-    function setTheme(theme) {
-      if (theme === 'dark') {
-        htmlElement.classList.add('dark-mode');
-        if (toggleBtn) toggleBtn.textContent = 'Светлая тема';
-      } else {
-        htmlElement.classList.remove('dark-mode');
-        if (toggleBtn) toggleBtn.textContent = 'Тёмная тема';
+<script>
+(function() {
+  const toggleBtn   = document.getElementById('theme-toggle');
+  const htmlElement = document.documentElement;
+
+  function getPreferredTheme() {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark' || saved === 'light') return saved;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      htmlElement.classList.add('dark-mode');
+      if (toggleBtn) {
+        toggleBtn.textContent = 'Светлая тема';
+        toggleBtn.setAttribute('aria-pressed', 'true');
+        toggleBtn.setAttribute('aria-label', 'Включить светлую тему');
       }
-      localStorage.setItem('theme', theme);
-    }
-    
-    // Получение сохранённой темы или системной
-    function getPreferredTheme() {
-      const saved = localStorage.getItem('theme');
-      if (saved === 'dark' || saved === 'light') return saved;
-      // Если нет сохранённого – проверить системную тему
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    
-    // Инициализация
-    const initialTheme = getPreferredTheme();
-    setTheme(initialTheme);
-    
-    // Обработчик на кнопку
-    if (toggleBtn) {
-      toggleBtn.addEventListener('click', () => {
-        const isDark = htmlElement.classList.contains('dark-mode');
-        setTheme(isDark ? 'light' : 'dark');
-      });
-    }
-    
-    // (Опционально) Следить за изменением системной темы, если нет ручного выбора
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-      // Только если пользователь явно не выбирал тему (сохранённая отсутствует)
-      if (!localStorage.getItem('theme')) {
-        setTheme(e.matches ? 'dark' : 'light');
+    } else {
+      htmlElement.classList.remove('dark-mode');
+      if (toggleBtn) {
+        toggleBtn.textContent = 'Тёмная тема';
+        toggleBtn.setAttribute('aria-pressed', 'false');
+        toggleBtn.setAttribute('aria-label', 'Включить тёмную тему');
       }
+    }
+    localStorage.setItem('theme', theme);
+  }
+
+  function setTheme(theme) {
+    if (document.startViewTransition && document.visibilityState === 'visible') {
+      document.startViewTransition(() => applyTheme(theme));
+    } else {
+      applyTheme(theme);
+    }
+  }
+
+  applyTheme(getPreferredTheme());
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const isDark = htmlElement.classList.contains('dark-mode');
+      setTheme(isDark ? 'light' : 'dark');
     });
-  })();
+  }
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      applyTheme(e.matches ? 'dark' : 'light');
+    }
+  });
+
+  /* Отключаем авто-вращение 3D при reduced motion */
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    customElements.whenDefined('model-viewer').then(() => {
+      document.querySelectorAll('model-viewer').forEach(mv => {
+        mv.removeAttribute('auto-rotate');
+      });
+    });
+  }
+})();
 </script>
-    
+
+<script>
+(function() {
+  const navLinks = document.querySelectorAll('.header-nav a[href^="#"]');
+  const sections = [...navLinks].map(a =>
+    document.querySelector(a.getAttribute('href'))
+  ).filter(Boolean);
+
+  const progress = document.getElementById('scroll-progress');
+
+  function getScrollTop() {
+    return window.scrollY
+        || document.documentElement.scrollTop
+        || document.body.scrollTop
+        || 0;
+  }
+
+  function getMaxScroll() {
+    const docH = Math.max(
+      document.body.scrollHeight,       document.documentElement.scrollHeight,
+      document.body.offsetHeight,       document.documentElement.offsetHeight
+    );
+    return Math.max(0, docH - window.innerHeight);
+  }
+
+  function atBottom() {
+    return getScrollTop() >= getMaxScroll() - 2;
+  }
+
+  function setActive(id) {
+    navLinks.forEach(a => {
+      const isActive = a.getAttribute('href') === '#' + id;
+      a.classList.toggle('is-active', isActive);
+      if (isActive) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
+  }
+
+  function updateActive() {
+    if (atBottom() && navLinks.length) {
+      setActive(navLinks[navLinks.length - 1].getAttribute('href').slice(1));
+      return;
+    }
+    const probe = 120;
+    let current = null;
+    sections.forEach(sec => {
+      if (sec.getBoundingClientRect().top <= probe) current = sec.id;
+    });
+    setActive(current);
+  }
+
+  function updateProgress() {
+    const max = getMaxScroll();
+    const pct = max > 0 ? Math.min(100, (getScrollTop() / max) * 100) : 0;
+    progress.style.width = pct + '%';
+  }
+
+  window.addEventListener('scroll', () => {
+    updateActive();
+    updateProgress();
+  }, { passive: true });
+
+  window.addEventListener('resize', () => {
+    updateActive();
+    updateProgress();
+  });
+
+  updateActive();
+  updateProgress();
+})();
+</script>
+
+<!-- Yandex.Metrika counter — замените XXXXXXXX на номер своего счётчика ТИМ-ДПК -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=XXXXXXXX', 'ym');
+    ym(XXXXXXXX, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXXX" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
 </body>
 </html>
