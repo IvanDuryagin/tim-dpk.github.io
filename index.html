@@ -183,11 +183,10 @@
 
     <nav class="header-nav" id="primary-nav" aria-label="Основная навигация">
       <a href="#about">О проекте</a>
-      <a href="#steps">Алгоритм</a>
+      <a href="#developments">Разработки</a>
       <a href="#tech">Технологии</a>
       <a href="#team">Команда</a>
       <a href="#partners">Партнёры</a>
-      <a href="#developments">Разработки</a>
       <a href="#contacts">Контакты</a>
     </nav>
 
@@ -263,96 +262,60 @@
           <p class="pub-link"><a href="https://elibrary.ru/item.asp?id=75122535" target="_blank" rel="noopener">https://elibrary.ru/item.asp?id=75122535</a></p>
 
           <p class="pub-title">5. Исследование деревянных балок, усиленных внешним армированием</p>
-          <p class="pub-link"><a href="https://disk.yandex.ru/i/sUOKvnpax0ecrw" target="_blank" rel="noopener">https://disk.yandex.ru/i/sUOKvnpax0ecrw</a></p>
+          <p class="pub-link"><a href="https://www.elibrary.ru/item.asp?id=91812719" target="_blank" rel="noopener">https://www.elibrary.ru/item.asp?id=91812719</a></p>
 
           <p class="pub-title">6. Криволинейные составные стержни на податливых связях</p>
-          <p class="pub-link"><a href="https://disk.yandex.ru/i/rBC7y3Qfd2OjHw" target="_blank" rel="noopener">https://disk.yandex.ru/i/rBC7y3Qfd2OjHw</a></p>
+          <p class="pub-link"><a href="https://www.elibrary.ru/item.asp?id=91912552" target="_blank" rel="noopener">https://www.elibrary.ru/item.asp?id=91912552</a></p>
         </div>
       </div>
     </section>
 
-    <!-- Алгоритм работы -->
-    <section class="steps" id="steps">
+    <!-- Разработки -->
+    <section class="developments" id="developments">
       <div class="container">
-        <h2 class="section-title">Алгоритм работы</h2>
-        <div class="steps__list">
-          <article class="step-card">
-            <picture>
-              <source srcset="img/step1.webp" type="image/webp">
-              <img src="img/step1.png" alt="Шаг 1. Экспорт BIM-модели в IFC"
-                   class="step-card__image" width="600" height="600"
-                   loading="lazy" decoding="async">
-            </picture>
-            <div class="step-card__body">
-              <h3 class="step-card__title">Шаг 1. Экспорт BIM-модели в IFC</h3>
-              <p class="step-card__desc">Пользователь экспортирует трёхмерную модель из Archicad, Revit или Renga в открытый формат IFC, сохраняя геометрию, слоистую структуру ДПК-панелей и данные о нагрузках.</p>
-            </div>
-          </article>
+        <h2 class="section-title section-title--center">Наши разработки</h2>
 
-          <article class="step-card">
-            <picture>
-              <source srcset="img/step2.webp" type="image/webp">
-              <img src="img/step2.png" alt="Шаг 2. Загрузка IFC в ядро ТИМ-ДПК"
-                   class="step-card__image" width="600" height="600"
-                   loading="lazy" decoding="async">
-            </picture>
-            <div class="step-card__body">
-              <h3 class="step-card__title">Шаг 2. Загрузка IFC в ядро «ТИМ-ДПК»</h3>
-              <p class="step-card__desc">Программа парсит IFC-файл, идентифицирует все CLT/ДПК-панели (объекты IfcPlate) и извлекает их геометрию, толщину, ориентацию слоёв и уникальные идентификаторы.</p>
-            </div>
-          </article>
+        <div class="developments__actions">
 
-          <article class="step-card">
-            <picture>
-              <source srcset="img/step3.webp" type="image/webp">
-              <img src="img/step3.png" alt="Шаг 3. Обнаружение узлов соединений"
-                   class="step-card__image" width="600" height="600"
-                   loading="lazy" decoding="async">
-            </picture>
-            <div class="step-card__body">
-              <h3 class="step-card__title">Шаг 3. Обнаружение и классификация узлов соединений</h3>
-              <p class="step-card__desc">Алгоритм пространственного анализа находит места контакта панелей и определяет тип узла (угловой, Т-образный, крестовый, нахлёст).</p>
+          <div class="development-item">
+            <div class="split-action">
+              <a href="#" class="split-action__btn">Скачать программу</a>
+              <button class="split-action__toggle" type="button" aria-label="Посмотреть скриншоты программы">
+                <span>Интерфейс</span>
+              </button>
             </div>
-          </article>
+            <p class="development-desc">Приложение для автоматического переноса данных об узлах соединений из BIM-моделей в расчётные МКЭ-комплексы.</p>
+          </div>
 
-          <article class="step-card">
-            <picture>
-              <source srcset="img/step4.webp" type="image/webp">
-              <img src="img/step4.png" alt="Шаг 4. Формирование JSON-спецификации"
-                   class="step-card__image" width="600" height="600"
-                   loading="lazy" decoding="async">
-            </picture>
-            <div class="step-card__body">
-              <h3 class="step-card__title">Шаг 4. Формирование JSON-спецификации</h3>
-              <p class="step-card__desc">На основе собранных данных создаётся структурированный JSON-файл — машиночитаемое техническое задание, содержащее все характеристики узлов, материалов и нагрузок.</p>
-            </div>
-          </article>
+        </div>
 
-          <article class="step-card">
+        <div class="developments__grid">
+          <div class="patent-card" data-model="">
             <picture>
-              <source srcset="img/step5.webp" type="image/webp">
-              <img src="img/step5.png" alt="Шаг 5. Генерация скрипта для МКЭ"
-                   class="step-card__image" width="600" height="600"
+              <source srcset="img/patent2.webp" type="image/webp">
+              <img src="img/patent2.jpeg" alt="Патент на полезную модель RU 229881"
+                   class="patent-card__image" width="600" height="840"
                    loading="lazy" decoding="async">
             </picture>
-            <div class="step-card__body">
-              <h3 class="step-card__title">Шаг 5. Генерация скрипта для целевого МКЭ-пакета</h3>
-              <p class="step-card__desc">Конвертер преобразует JSON в APDL-скрипт для ANSYS, командный файл для SCAD/LIRA или скрипт для Rhino+Grasshopper.</p>
+            <div class="patent-card__info">
+              <h3 class="patent-card__title">Узловое комбинированное соединение деревокомпозитных конструкций</h3>
+              <div class="patent-card__number">RU 229881 U1, 31.10.2024. Заявка № 2024114143 от 24.05.2024.</div>
+              <p class="patent-card__desc">Попов Е.В., Лабудин Б.В., Столыпин Д.А., Чередниченко В.В., Починков М.В., Дурягин И.А.</p>
             </div>
-          </article>
-
-          <article class="step-card">
+          </div>
+          <div class="patent-card" data-model="">
             <picture>
-              <source srcset="img/step6.webp" type="image/webp">
-              <img src="img/step6.png" alt="Шаг 6. Расчёт в МКЭ"
-                   class="step-card__image" width="600" height="600"
+              <source srcset="img/patent1.webp" type="image/webp">
+              <img src="img/patent1.jpeg" alt="Патент на полезную модель RU 229553"
+                   class="patent-card__image" width="600" height="840"
                    loading="lazy" decoding="async">
             </picture>
-            <div class="step-card__body">
-              <h3 class="step-card__title">Шаг 6. Расчёт в конечно-элементном комплексе</h3>
-              <p class="step-card__desc">Инженер запускает сгенерированный скрипт в выбранной среде и получает готовую конечно-элементную модель с назначенными свойствами, контактами и нагрузками.</p>
+            <div class="patent-card__info">
+              <h3 class="patent-card__title">Составной деревокомпозитный элемент на когтевых шайбах</h3>
+              <div class="patent-card__number">RU 229553 U1, 11.10.2024. Заявка № 2024114142 от 24.05.2024.</div>
+              <p class="patent-card__desc">Попов Е.В., Лабудин Б.В., Столыпин Д.А., Чередниченко В.В., Копров О.В., Дурягин И.А.</p>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -516,55 +479,24 @@
       </div>
     </section>
 
-    <!-- Разработки (патенты) -->
-    <section class="developments" id="developments">
-      <div class="container">
-        <h2 class="section-title section-title--center">Наши разработки</h2>
-        <div class="developments__grid">
-          <div class="patent-card" data-model="">
-            <picture>
-              <source srcset="img/patent2.webp" type="image/webp">
-              <img src="img/patent2.jpeg" alt="Патент на полезную модель RU 229881"
-                   class="patent-card__image" width="600" height="840"
-                   loading="lazy" decoding="async">
-            </picture>
-            <div class="patent-card__info">
-              <h3 class="patent-card__title">Узловое комбинированное соединение деревокомпозитных конструкций</h3>
-              <div class="patent-card__number">RU 229881 U1, 31.10.2024. Заявка № 2024114143 от 24.05.2024.</div>
-              <p class="patent-card__desc">Попов Е.В., Лабудин Б.В., Столыпин Д.А., Чередниченко В.В., Починков М.В., Дурягин И.А.</p>
-            </div>
-          </div>
-          <div class="patent-card" data-model="">
-            <picture>
-              <source srcset="img/patent1.webp" type="image/webp">
-              <img src="img/patent1.jpeg" alt="Патент на полезную модель RU 229553"
-                   class="patent-card__image" width="600" height="840"
-                   loading="lazy" decoding="async">
-            </picture>
-            <div class="patent-card__info">
-              <h3 class="patent-card__title">Составной деревокомпозитный элемент на когтевых шайбах</h3>
-              <div class="patent-card__number">RU 229553 U1, 11.10.2024. Заявка № 2024114142 от 24.05.2024.</div>
-              <p class="patent-card__desc">Попов Е.В., Лабудин Б.В., Столыпин Д.А., Чередниченко В.В., Копров О.В., Дурягин И.А.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Контакты -->
     <section class="contacts" id="contacts">
       <div class="container">
         <h2 class="section-title">Контакты</h2>
         <div class="contacts__grid">
           <div class="contact-item">
-            <div class="contact-item__icon" style="font-size: 2.5rem; line-height: 1;">🏠</div>
+            <div class="contact-item__icon">
+              <svg viewBox="0 0 24 24" width="100%" height="100%" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </div>
             <div class="contact-item__content">
               <h3 class="contact-item__title">Адрес</h3>
               <p>г. Архангельск, набережная Северной Двины 22, ауд. 2418 (кафедра «Инженерных конструкций, архитектуры и графики», САФУ им. М.В. Ломоносова)</p>
             </div>
           </div>
           <div class="contact-item">
-            <div class="contact-item__icon" style="font-size: 2.5rem; line-height: 1;">📧</div>
+            <div class="contact-item__icon">
+              <svg viewBox="0 0 24 24" width="100%" height="100%" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
             <div class="contact-item__content">
               <h3 class="contact-item__title">Свяжитесь с нами</h3>
               <p>+7 (952) 250 70 69<br>duryagin1995@yandex.ru</p>
@@ -578,15 +510,7 @@
     <!-- Карта -->
     <section class="map">
       <div class="map__container">
-        <iframe
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3A9656a015b252f015a0b6656f6b3f0c5ac35fe5002d817dbff61744ae1c24b570&amp;source=constructor"
-          width="100%"
-          height="320"
-          frameborder="0"
-          allowfullscreen
-          style="display:block; border:0;"
-          title="Карта расположения кафедры САФУ в Архангельске">
-        </iframe>
+        <iframe id="map_526564509" frameborder="0" width="100%" height="600px" src="https://makemap.2gis.ru/widget?data=eJw1jsFuhDAMRP_FvaJVCAnJ8gFb9ba3Sq32gIjbRgo4Cl6pW8S_10Drk-UZv5kFqAQsGJ6RRuQScYbufQF-ZIQOLtjzvSBUkAtlLLzrCwyUqIj-pLSvP7ToHDltH7IGnIcSM0eajsPPyxTwG7pa_c9awecR-Nhwf2lXihOLfyApFaee9zJGnayxjXdVa05Wn7W3N_mPQYCuaddbBWOfrzTHI3GB1DN0h7k2unZG67axFaRN3nGubnx7Vs4qpaUf0SgwL1RpTim9fiGmt_3K5Y7rLxIKWUU" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>
       </div>
     </section>
 
@@ -596,11 +520,10 @@
         <span class="footer__logo">ТИМ-ДПК</span>
         <nav class="footer__nav">
           <a href="#about">О проекте</a>
-          <a href="#steps">Алгоритм</a>
+          <a href="#developments">Разработки</a>
           <a href="#tech">Технологии</a>
           <a href="#team">Команда</a>
           <a href="#partners">Партнёры</a>
-          <a href="#developments">Разработки</a>
         </nav>
         <small class="footer__copy">ТИМ-ДПК 2026</small>
       </div>
